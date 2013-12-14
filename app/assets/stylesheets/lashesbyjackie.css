@@ -61,3 +61,6 @@ button.btn{
   left: 15px;
   margin-left: 15px;
 }
+button.btn.gallery{
+  background-color: maroon;
+}
