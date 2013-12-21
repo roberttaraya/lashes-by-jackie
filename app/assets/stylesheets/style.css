@@ -60,7 +60,7 @@ h1{
 }
 
 header#page-header{
-  outline: 1px dotted red;
+  /*outline: 1px dotted red;*/
   height: 75px;
   width: 100%;
   float:left;
@@ -69,64 +69,72 @@ header#page-header{
 
 section#intro{
   /*top: 75px;*/
-  /*background-color: red;*/
-  outline: 1px solid green;
+  /*background-color: #f2ebbf;*/
+  background-color: rgba(242, 235, 191, 0.2);
+  /*outline: 1px solid green;*/
   height: 600px;
   width: 100%;
   float: left;
 }
 
 section#gallery{
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
   width: 100%;
   height: 600px;
   float: left;
 }
 
 section#testimonials{
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
+  /*background-color: #f06060;*/
+  background-color: rgba(240, 96, 96, 0.8);
   width: 100%;
-  height: 250px;
+  height: 300px;
   float: left;
 }
 
 section#services{
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
+  /*background-color: #8cbeb2;*/
+  background-color: rgba(140, 190, 178, 0.2);
   width: 100%;
   height: 600px;
   float: left;
 }
 
 section#faqs{
-  outline: 1px solid blue;
+  overflow: hidden;
+  /*outline: 1px solid blue;*/
   width: 100%;
   height: 600px;
   float: left;
 }
 
 section#pricing{
-  outline: 1px solid yellow;
+  background-color: rgba(140, 190, 178, 0.2);
+  /*outline: 1px solid yellow;*/
   width: 100%;
   height: 600px;
   float: left;
 }
 
 section#contact{
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
   width: 100%;
   height: 375px;
   float: left;
 }
 
 section#appointments{
-  outline: 1px solid yellow;
+  background-color: rgba(140, 190, 178, 0.2);
+  /*outline: 1px solid yellow;*/
   width: 100%;
   height: 450px;
   float: left;
 }
 
 section#map{
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
   width: 100%;
   height: 450px;
   float: left;
