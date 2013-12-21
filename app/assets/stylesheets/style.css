@@ -51,6 +51,7 @@ body{
   outline: 1px solid blue;
   position: absolute;
   font-family: Helvetica, Arial, sans-serif;
+  color: #5c4b51;
 }
 
 h1{
@@ -67,6 +68,29 @@ header#page-header{
   /*top: 0px;*/
 }
 
+header ul{
+  float: right;
+  line-height: 75px;
+}
+
+header ul li{
+  display:inline;
+  padding: 0 35px 0 0;
+}
+
+header ul li a{
+  text-decoration: none;
+  color: #5c4b51;
+}
+
+header ul li a:hover{
+  /*color: rgb(242, 235, 191);*/
+  color: #f3b562;
+}
+
+section{
+  padding: 20px;
+}
 section#intro{
   /*top: 75px;*/
   /*background-color: #f2ebbf;*/
