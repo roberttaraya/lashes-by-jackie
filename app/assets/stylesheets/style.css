@@ -84,7 +84,8 @@ header ul li a{
 }
 
 header ul li a:hover{
-  color: rgb(242, 235, 191);
+  /*color: rgb(242, 235, 191);*/
+  color: #f3b562;
 }
 
 section{
