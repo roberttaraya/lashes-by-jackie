@@ -1,0 +1,91 @@
+body{
+  outline: 1px solid blue;
+  position: absolute;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1{
+  font-size: 2.5em;
+  font-weight: normal;
+  text-align: center;
+}
+
+header#page-header{
+  outline: 1px dotted red;
+  height: 75px;
+  width: 100%;
+  float:left;
+  /*top: 0px;*/
+}
+
+section#intro{
+  /*top: 75px;*/
+  /*background-color: red;*/
+  outline: 1px solid green;
+  height: 600px;
+  width: 100%;
+  float: left;
+}
+
+section#gallery{
+  outline: 1px solid yellow;
+  width: 100%;
+  height: 600px;
+  float: left;
+}
+
+section#testimonials{
+  outline: 1px solid blue;
+  width: 100%;
+  height: 250px;
+  float: left;
+}
+
+section#services{
+  outline: 1px solid yellow;
+  width: 100%;
+  height: 600px;
+  float: left;
+}
+
+section#faqs{
+  outline: 1px solid blue;
+  width: 100%;
+  height: 600px;
+  float: left;
+}
+
+section#pricing{
+  outline: 1px solid yellow;
+  width: 100%;
+  height: 600px;
+  float: left;
+}
+
+section#contact{
+  outline: 1px solid blue;
+  width: 100%;
+  height: 375px;
+  float: left;
+}
+
+section#appointments{
+  outline: 1px solid yellow;
+  width: 100%;
+  height: 450px;
+  float: left;
+}
+
+section#map{
+  outline: 1px solid blue;
+  width: 100%;
+  height: 450px;
+  float: left;
+}
+
+footer#page-footer{
+  outline: 1px solid green;
+  width: 100%;
+  height: 150px;
+  float: left;
+}

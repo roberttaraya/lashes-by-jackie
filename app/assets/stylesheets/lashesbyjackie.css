@@ -14,7 +14,7 @@ body{
   height: 74px;
 }
 
-#main-nav ul{
+#nav{
   float: right;
   margin: 0 auto;
   height: 75px;
@@ -22,20 +22,20 @@ body{
   line-height: 75px;
 }
 
-#main-nav ul li{
+#nav li{
   display: inline;
   margin: 0 20px;
   font-family: arial;
   font-size: .9em;
 }
 
-#main-nav ul a{
+#nav a{
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-#main-nav ul a:hover{
+#nav a:hover{
   color: gray;
 }
 
@@ -46,7 +46,7 @@ body{
   width:100%;
 }
 
-#home button{
+button{
   height: 50px;
   width: 150px;
   border-radius: 8px;
@@ -54,13 +54,13 @@ body{
   color: white;
 }
 
-#home button.btn{
+button.btn{
   font-size: 1.25em;
   position: relative;
   top: 325px;
   left: 15px;
   margin-left: 15px;
 }
-#home button.btn.gallery{
+button.btn.gallery{
   background-color: maroon;
 }
