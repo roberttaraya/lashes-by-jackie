@@ -145,7 +145,7 @@ section#intro p{
   top: 350px;
   left: 35px;
   font-weight: normal;
-
+  text-shadow: 2px 2px #5c4b51;
 }
 
 section#intro button a{
