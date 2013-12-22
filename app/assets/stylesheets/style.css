@@ -112,8 +112,63 @@ div.transbox{
   height:600px;
   background-color:#ffffff;
   opacity:0.3;
-  filter:alpha(opacity=30); /* For IE8 and earlier */
+  filter:alpha(opacity=30); For IE8 and earlier
   }
+  */
+
+section#intro h1{
+  font-size: 4em;
+  text-align: left;
+  position: relative;
+  color: white;
+  top: 340px;
+  left: 35px;
+  font-weight: bold;
+text-shadow: 2px 2px #8cbeb2;
+}
+
+section#intro p{
+  font-size: 2.5em;
+  text-align: left;
+  position: relative;
+  color: white;
+  top: 350px;
+  left: 35px;
+  font-weight: normal;
+
+}
+
+section#intro button a{
+  text-decoration: none;
+}
+
+section#intro button a:active{
+  text-decoration: none;
+}
+
+section#intro button:active{
+  text-decoration: none;
+}
+
+button{
+  height: 50px;
+  width: 150px;
+  border-radius: 8px;
+  background-color: #f3b562;
+  color: white;
+}
+
+button.btn{
+  font-size: 1.25em;
+  position: relative;
+  top: 380px;
+  left: 15px;
+  margin-left: 15px;
+}
+
+button.btn.gallery{
+  background-color: #f06060;
+}
 
 section#gallery{
   /*outline: 1px solid yellow;*/
