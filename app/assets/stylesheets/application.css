@@ -10,6 +10,5 @@
  *
  *= require_self
  *= require_tree .
+ *= require_tree '../../../vendor/assets/stylesheets/.'
  */
-'app/assets/stylesheets/normalize.css'
-'app/assets/stylesheets/style.css'
