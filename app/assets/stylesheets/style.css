@@ -45,6 +45,16 @@ a img {
   border: none;
 }
 
+a {
+  outline: none;
+}
+
+button{
+  outline: none;
+  border: none;
+  background:none;
+}
+
 /* layout styling*/
 
 body{
@@ -140,6 +150,7 @@ section#intro p{
 
 section#intro button a{
   text-decoration: none;
+  outline: none
 }
 
 section#intro button a:active{
