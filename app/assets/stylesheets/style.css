@@ -68,6 +68,37 @@ header#page-header{
   /*top: 0px;*/
 }
 
+header#page-header #header-logo{
+  /*border: 5px solid blue;*/
+  height: 70px;
+  width: 70px;
+  float: left;
+  margin: 3px 10px 3px 15px;
+  background-image: url(http://placedog.com/g/80/80);
+  background-repeat:no-repeat;
+  -webkit-border-radius: 35px 35px 35px 35px;
+  -moz-border-radius: 35px 35px 35px 35px;
+  -o-border-radius: 35px 35px 35px 35px;
+  -ms-border-radius: 35px 35px 35px 35px;
+  -khtml-border-radius: 35px 35px 35px 35px;
+  border-radius: 35px 35px 35px 35px;
+}
+
+header #company-name{
+  float: left;
+  height: 75px;
+  /*outline: 1px solid yellow;*/
+  padding: 25px 0;
+}
+
+header #company-name h2{
+  /*display: inline;*/
+  /*padding-top: 10px;*/
+  /*outline: 1px solid blue;*/
+  font-size: 2em
+  letter-spacing: 0.5px;
+}
+
 header ul{
   float: right;
   line-height: 75px;
@@ -75,7 +106,10 @@ header ul{
 
 header ul li{
   display:inline;
-  padding: 0 35px 0 0;
+  padding: 0 20px 0 0;
+  /*font-weight: bold;*/
+  font-size: 0.9em;
+  letter-spacing: .6px
 }
 
 header ul li a{
@@ -94,7 +128,7 @@ section{
 section#intro{
   /*top: 75px;*/
   /*background-color: #f2ebbf;*/
-  background-image: url(http://placedog.com/g/1200/650);
+  background-image: url(http://placedog.com/1200/650);
   /*background-color: rgba(242, 235, 191, 0.5);*/
   /*outline: 1px solid green;*/
   margin: 0 0 0 0;
@@ -104,7 +138,8 @@ section#intro{
   float: left;
 }
 
-div.transbox{
+/*
+section .transbox{
   position:absolute;
   top: 75px;
   left: 0px;
