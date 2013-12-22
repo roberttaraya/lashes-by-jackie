@@ -223,6 +223,14 @@ section#gallery{
   float: left;
 }
 
+section#gallery .gallery-pics{
+  background-image: url(http://placedog.com/200/150);
+  height: 125px;
+  width: 200px;
+  float: left;
+  margin: 20px 35px;
+}
+
 section#testimonials{
   /*outline: 1px solid blue;*/
   /*background-color: #f06060;*/
