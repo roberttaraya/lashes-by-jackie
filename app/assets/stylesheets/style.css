@@ -139,6 +139,7 @@ section#intro{
   /*top: 75px;*/
   /*background-color: #f2ebbf;*/
   background-image: url(http://placedog.com/1200/650);
+  background-repeat: no-repeat;
   /*background-color: rgba(242, 235, 191, 0.5);*/
   /*outline: 1px solid green;*/
   margin: 0 0 0 0;
