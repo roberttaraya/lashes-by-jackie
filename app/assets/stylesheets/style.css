@@ -266,14 +266,13 @@ section#testimonials{
 
 section.stage{
   position: relative;
-  height: 270px;
-  width: 960px;
+  height: 90%;
+  width: 80%;
   top: 15px;
-  /*left: 0px;*/
   margin: 0 auto;
   /*padding: 50px;*/
   overflow: hidden;
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
 }
 
 .filmstrip{
@@ -281,40 +280,60 @@ section.stage{
   top: 0px;
   left: 0px;
   height: 100%;
-  width: 100%;
-  background-color: green;
-  white-space: nowrap;
+  width: 999em;
+  /*background-color: green;*/
+  /*white-space: nowrap;*/
+  transition: left 1s;
 }
 
 article.cell{
   display: inline-block;
-  width: 100%;
-  height: 100%;
+  /*position: relative;*/
+  width: 970px;
+  height: 270px;
+  float: left;
   /*padding-top: 30px;*/
   /*margin: 10px auto;*/
   /*vertical-align: middle;*/
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
   font-family: "Times Roman", Times, serif;
-  transition: left 2s, background-color 1s;
+}
+
+#first{
+  padding: 90px 0px 0px 0px;
+}
+
+#second{
+  padding: 55px 0px 0px 0px;
+}
+
+#third{
+  padding: 100px 0px 0px 0px;
+}
+
+#fourth{
+  padding: 70px 0px 0px 0px;
 }
 
 p.testimonial{
-  /*text-align: center;*/
+  text-align: center;
   /*outline: 1px solid yellow;*/
-  /*font-size: 2.5em;*/
-  /*font-style: italic;*/
-  /*padding: 20px;*/
+  font-size: 2em;
+  font-style: italic;
+  padding: 0 50px;
 }
 
 footer.testimonial-info{
-  /*float: right;*/
-  /*padding-right: 20px;*/
-  /*font-size: 1.25em;*/
+  float: right;
+  padding-right: 20px;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 10px;
 }
 
 span.client-name{
   /*outline: 1px solid green;*/
-  /*margin: 10px 20px;*/
+  margin: 10px 20px;
 }
 
 section#services{
