@@ -58,7 +58,7 @@ button{
 /* layout styling*/
 
 body{
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
   position: absolute;
   font-family: Helvetica, Arial, sans-serif;
   color: #5c4b51;
@@ -133,7 +133,7 @@ header ul li a:hover{
 }
 
 section{
-  padding: 20px;
+  /*padding*/: 20px;
 }
 section#intro{
   /*top: 75px;*/
@@ -257,9 +257,83 @@ section#testimonials{
   /*outline: 1px solid blue;*/
   /*background-color: #f06060;*/
   background-color: rgba(240, 96, 96, 0.8);
-  width: 100%;
   height: 300px;
+  width: 100%;
   float: left;
+  /*padding: 0;*/
+  /*margin: 0;*/
+}
+
+section.stage{
+  position: relative;
+  height: 90%;
+  width: 80%;
+  top: 15px;
+  margin: 0 auto;
+  /*padding: 50px;*/
+  overflow: hidden;
+  /*outline: 1px solid blue;*/
+}
+
+.filmstrip{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 999em;
+  /*background-color: green;*/
+  /*white-space: nowrap;*/
+  transition: left 1s;
+}
+
+article.cell{
+  display: inline-block;
+  /*position: relative;*/
+  width: 970px;
+  height: 270px;
+  float: left;
+  /*padding-top: 30px;*/
+  /*margin: 10px auto;*/
+  /*vertical-align: middle;*/
+  /*outline: 1px solid blue;*/
+  font-family: "Times Roman", Times, serif;
+}
+
+#first{
+  padding: 90px 0px 0px 0px;
+}
+
+#second{
+  padding: 55px 0px 0px 0px;
+}
+
+#third{
+  padding: 100px 0px 0px 0px;
+}
+
+#fourth{
+  padding: 70px 0px 0px 0px;
+}
+
+p.testimonial{
+  text-align: center;
+  /*outline: 1px solid yellow;*/
+  font-size: 2em;
+  font-style: italic;
+  padding: 0 50px;
+}
+
+footer.testimonial-info{
+  float: right;
+  padding-right: 20px;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 10px;
+}
+
+span.client-name{
+  /*outline: 1px solid green;*/
+  margin: 10px 20px;
 }
 
 section#services{
