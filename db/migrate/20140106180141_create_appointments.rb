@@ -1,7 +1,7 @@
 class CreateAppointments < ActiveRecord::Migration
   def up
     create_table :appointments do  |t|
-      t.datetime :apppointment_date
+      t.datetime :appointment_date
       t.belongs_to :users
 
       t.timestamps
