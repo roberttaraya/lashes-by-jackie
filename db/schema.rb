@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(:version => 20140106184706) do
   end
 
   create_table "appointments", :force => true do |t|
-    t.datetime "apppointment_date"
+    t.datetime "appointment_date"
     t.integer  "users_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "appointments_services", :id => false, :force => true do |t|
