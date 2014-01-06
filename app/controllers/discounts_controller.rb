@@ -1,3 +1,3 @@
-class DiscountsController > ApplicationController
+class DiscountsController < ApplicationController
 
 end

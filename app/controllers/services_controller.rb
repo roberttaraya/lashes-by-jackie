@@ -1,3 +1,3 @@
-class ServicesController > ApplicationController
+class ServicesController < ApplicationController
 
 end

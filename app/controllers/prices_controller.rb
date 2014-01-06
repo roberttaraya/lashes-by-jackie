@@ -1,3 +1,3 @@
-class PricesController > ApplicationController
+class PricesController < ApplicationController
 
 end

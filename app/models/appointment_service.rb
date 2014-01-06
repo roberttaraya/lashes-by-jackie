@@ -1,2 +1,2 @@
-class AppointmentService > ActiveRecord::Base
+class AppointmentService < ActiveRecord::Base
 end
