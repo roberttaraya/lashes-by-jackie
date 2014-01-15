@@ -1,0 +1,5 @@
+<%= form_for @user do |f| %>
+  <%= f.text_field :email, placeholder: "Enter Email"%><br/>
+  <%= f.text_field :password_hash, placeholder: "Enter Password" %><br/>
+  <%= f.submit "Login" %><br/>
+<%end%>
