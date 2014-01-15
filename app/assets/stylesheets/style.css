@@ -376,6 +376,20 @@ section#appointments{
   float: left;
 }
 
+#calendarInfo, #calendarView{
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+#calendarInfo{
+
+}
+
+#calendarView{
+
+}
+
 section#map{
   /*outline: 1px solid blue;*/
   width: 100%;
