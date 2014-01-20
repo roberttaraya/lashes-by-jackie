@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
 gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
@@ -48,3 +47,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use debugger
 # gem 'debugger'
 
+#when pushing to heroku use => ruby '2.0.0'
+ruby '2.0.0'
