@@ -1,0 +1,7 @@
+try again
+
+did not create a new session
+
+<%= form_for(:user, url: sessions_path) do |f| %>
+  <%= render partial: "sessions/signin_form", locals: {f: f} %>
+<% end %>

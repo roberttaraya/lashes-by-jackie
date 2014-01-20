@@ -1,0 +1,16 @@
+<ul>
+  <li>
+    <%= f.text_field :email, placeholder: "Enter Email" %><br/>
+  </li>
+  <li>
+    <%= f.password_field :password, placeholder: "Enter Password" %><br/>
+  </li>
+  <li>
+    <%= f.submit %><br/>
+  </li>
+  <li>
+    <p>
+      New client? <%= link_to "Sign up now!", "/#appointments", class: 'signUpLink' %>
+    </p>
+  </li>
+</ul>

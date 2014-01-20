@@ -1,8 +1,14 @@
 LashesByJackie::Application.routes.draw do
-  resources :users
+  resources :appointments
+  resources :users #, except: [:create]
   resources :admins
+  resources :sessions, only: [:index, :new, :create, :destroy]
 
-  root :to => 'users#index'
+  # match 'signup' => 'users#create'
+  # match 'signin' => 'sessions#create'
+  # match 'signout' => 'sessions#destroy'
+
+  root :to => 'sessions#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
