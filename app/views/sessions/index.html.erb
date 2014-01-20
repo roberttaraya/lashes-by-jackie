@@ -2,7 +2,12 @@
   <div id="header-logo">
   </div>
   <div id="company-name">
-    <h2>Lashes by Jackie</h2>
+    <h2>Jackie's Lash Studio</h2>
+  </div>
+  <div class="userSignIn">
+    <%= form_for(:user, url: sessions_path) do |f| %>
+      <%= render partial: "sessions/signin_form", locals: {f: f} %>
+    <% end %>
   </div>
   <nav id="main-nav">
     <ul>
@@ -34,14 +39,7 @@
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-    <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
+
   </div>
 </section>
 
@@ -228,6 +226,20 @@
 
 <section id="appointments">
   <h1>Schedule Your Appointment</h1>
+  <div id="calendarInfo">
+    <div class="signIn">
+      <%= form_for(:user, url: sessions_path) do |f| %>
+        <%= render partial: "sessions/signin_form", locals: {f: f} %>
+      <% end %>
+    </div>
+    <div class="signUp">
+      <h1>Sign up</h1>
+      <%= form_for(:user, url: users_path) do |f| %>
+        <%= render partial: "sessions/signup_form", locals: {f: f} %>
+      <% end %>
+    </div>
+  </div>
+  <div id="calendarView"><img src="/assets/calendar-schedule.png" alt="calendar"></div>
 </section>
 
 <section id="map">
