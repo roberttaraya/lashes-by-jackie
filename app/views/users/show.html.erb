@@ -1,5 +1,9 @@
-<% if @user.first_name %>
-  Welcome back, <%= @user.first_name %>
+<% unless @user.first_name == "" %>
+  Welcome, <%= @user.first_name %>
 <% else %>
-  Welcome back! Update your profile <%= link_to "here", edit_user_path(@user.id) %>
+  Welcome! Update your profile <%= link_to "here", edit_user_path(@user.id) %>
 <% end %>
+
+<p>
+  <%= session.inspect %>
+</p>
