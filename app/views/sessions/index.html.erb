@@ -7,7 +7,6 @@
   <div class="userSignIn">
     <%= form_for(:user, url: sessions_path) do |f| %>
       <%= render partial: "sessions/signin_form", locals: {f: f} %>
-      <%= f.submit %>
     <% end %>
     <p>
       New client? <%= link_to "Sign up now!", new_user_path %>
