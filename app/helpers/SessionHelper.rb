@@ -5,5 +5,3 @@ module SessionHelper
     @user = nil
   end
 
-  def current_user
-    @user ||=
