@@ -13,7 +13,6 @@ var counter = 0
 // this code changes automatically every 2 seconds
 var autoCarousel = setInterval(function(){
   counter++
-  console.log(counter)
   $(".filmstrip").css("left", "-" + counter*970 + "px")
   if (counter === 2){
     counter = -1
