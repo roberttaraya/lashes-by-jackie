@@ -12,8 +12,10 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:user][:password])
       session[:current_user_id] = @user.id
       redirect_to user_path(@user)
+    elsif @user.nil?
+      render new_user_path
     else
-      redirect_to new_session_path
+      render new_session_path
     end
 
   end

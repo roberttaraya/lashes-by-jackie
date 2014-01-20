@@ -1,7 +1,16 @@
-try again
+<% if @user %>
+  <p>Sorry. There was an error when entering your email or password.</p>
 
-did not create a new session
+  <%= form_for(:user, url: sessions_path) do |f| %>
+    <%= render partial: "sessions/signin_form", locals: {f: f} %>
+    <%= f.submit %>
+  <% end %>
 
-<%= form_for(:user, url: sessions_path) do |f| %>
-  <%= render partial: "sessions/signin_form", locals: {f: f} %>
-<% end %>
+<% else %>
+  <h1>Login</h1>
+  <%= form_for(:user, url: sessions_path) do |f| %>
+    <%= render partial: "sessions/signin_form", locals: {f: f} %>
+    <%= f.submit %>
+  <% end %>
+
+<%  end %>
