@@ -64,5 +64,8 @@ module LashesByJackie
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Setting up the Rails Asset Pipeline for Heroku Deployment
+    config.assets.initialize_on_precompile = false
   end
 end
