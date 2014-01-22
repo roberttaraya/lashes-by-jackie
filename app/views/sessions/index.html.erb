@@ -2,11 +2,11 @@
   <div id="header-logo">
   </div>
   <div id="company-name">
-    <h2>Jackie's Lash Studio</h2>
+    <h1>Jackie's Lash Studio</h1>
   </div>
   <div class="userSignIn">
-    <%= form_for(:user, url: sessions_path) do |f| %>
-      <%= render partial: "sessions/signin_form", locals: {f: f} %>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      <%= render partial: "sessions/login_form", locals: {f: f} %>
     <% end %>
     <p>
       New client? <%= link_to "Sign up now!", signup_path %>
@@ -30,7 +30,7 @@
 <section id="intro">
   <div class="transbox">
   </div>
-    <h1>Lashes by Jackie</h1>
+    <h1>Jackie's Lash Studio</h1>
     <p>She's the best!</p>
     <a href="#services"><button class="btn services">Learn More</button></a>
     <a href="#gallery"><button class="btn gallery">View Gallery</button></a>
@@ -43,7 +43,6 @@
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-
   </div>
 </section>
 

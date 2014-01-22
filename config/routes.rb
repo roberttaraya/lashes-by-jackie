@@ -2,11 +2,11 @@ LashesByJackie::Application.routes.draw do
   resources :appointments
   resources :users, except: [:new]
   resources :admins
-  resources :sessions, only: [:index, :create, :destroy]
+  resources :sessions, only: [:index, :create]
 
   match 'signup' => 'users#new'
   match 'login' => 'sessions#new'
-  # match 'signout' => 'sessions#destroy'
+  match 'signout' => 'sessions#destroy'
 
   root :to => 'sessions#index'
 
