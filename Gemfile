@@ -28,6 +28,8 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -44,3 +46,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+#when pushing to heroku use => ruby '2.0.0'
+ruby '2.0.0'
