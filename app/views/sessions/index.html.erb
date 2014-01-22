@@ -9,7 +9,7 @@
       <%= render partial: "sessions/login_form", locals: {f: f} %>
     <% end %>
     <p>
-      New client? <%= link_to "Sign up now!", signup_path %>
+      New client? <%= link_to "Sign up", signup_path %> now!
     </p>
 
   </div>
@@ -230,7 +230,7 @@
 <section id="appointments">
   <h1>Schedule Your Appointment</h1>
   <div id="calendarInfo">
-    <p><%= link_to "Login", signin_path %> or <%= link_to "Sign up", signup_path %> to request an appointment</p>
+    <p><%= link_to "Log in", login_path %> or <%= link_to "Sign up", signup_path %> to request an appointment</p>
   </div>
   <div id="calendarView"><img src="/assets/calendar-schedule.png" alt="calendar"></div>
 </section>
