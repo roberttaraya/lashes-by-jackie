@@ -1,14 +1,15 @@
 <% if @user %>
   <p>Sorry. There was an error when entering your email or password.</p>
 
-  <%= form_for(:user, url: sessions_path) do |f| %>
-    <%= render partial: "sessions/signin_form", locals: {f: f} %>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+    <%= render partial: "sessions/login_form", locals: {f: f} %>
   <% end %>
 
 <% else %>
   <h1>Sign in</h1>
-  <%= form_for(:user, url: sessions_path) do |f| %>
-    <%= render partial: "sessions/signin_form", locals: {f: f} %>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+    <%= render partial: "sessions/login_form", locals: {f: f} %>
   <% end %>
 
 <%  end %>
+<p><%= link_to "Sign up", signup_path %> to become a registered client.</p>

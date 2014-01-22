@@ -2,14 +2,14 @@
   <div id="header-logo">
   </div>
   <div id="company-name">
-    <h2>Jackie's Lash Studio</h2>
+    <h1>Jackie's Lash Studio</h1>
   </div>
   <div class="userSignIn">
-    <%= form_for(:user, url: sessions_path) do |f| %>
-      <%= render partial: "sessions/signin_form", locals: {f: f} %>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      <%= render partial: "sessions/login_form", locals: {f: f} %>
     <% end %>
     <p>
-      New client? <%= link_to "Sign up now!", new_user_path %>
+      New client? <%= link_to "Sign up", signup_path %> now!
     </p>
 
   </div>
@@ -30,7 +30,7 @@
 <section id="intro">
   <div class="transbox">
   </div>
-    <h1>Lashes by Jackie</h1>
+    <h1>Jackie's Lash Studio</h1>
     <p>She's the best!</p>
     <a href="#services"><button class="btn services">Learn More</button></a>
     <a href="#gallery"><button class="btn gallery">View Gallery</button></a>
@@ -43,7 +43,6 @@
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
     <div class="gallery-pics"><img src="http://placedog.com/250/175"></div>
-
   </div>
 </section>
 
@@ -231,7 +230,7 @@
 <section id="appointments">
   <h1>Schedule Your Appointment</h1>
   <div id="calendarInfo">
-    <p><%= link_to "Login", new_session_path %> or <%= link_to "Sign up", new_user_path %> to request an appointment</p>
+    <p><%= link_to "Log in", login_path %> or <%= link_to "Sign up", signup_path %> to request an appointment</p>
   </div>
   <div id="calendarView"><img src="/assets/calendar-schedule.png" alt="calendar"></div>
 </section>
