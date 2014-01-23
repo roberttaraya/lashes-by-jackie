@@ -34,7 +34,26 @@ describe User do
     expect(user).to have(1).errors_on(:email)
   end
 
-  it "is invalid without a password"
-  it "is invalid without a password that is at least 6 characters long"
-  it "returns a user's full name as a string"
+  it "is invalid without a password" do
+    expect(User.new(password: nil)).to have(1).errors_on(:password_digest)
+  end
+
+  it "is invalid without a password that is at least 6 characters long" do
+    expect(User.new(password: "pw")).to have(1).errors_on(:password)
+  end
+
+  it "is invalid without a password confirmation" do
+    expect(User.new(password_confirmation: nil)).to have(1).errors_on(:password_confirmation)
+  end
+
+  it "returns a user's full name as a string" do
+    user = User.new(
+      first_name: "John",
+      last_name: "Doe",
+      email: "john@example.com",
+      password: "password",
+      password_confirmation: "password")
+
+    expect(user.name).to eq("John Doe")
+  end
 end
