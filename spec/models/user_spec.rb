@@ -56,4 +56,50 @@ describe User do
 
     expect(user.name).to eq("John Doe")
   end
+
+  it "returns a sorted array of results that match" do
+    smith = User.create(
+      first_name: "John",
+      last_name: "Smith",
+      email: "johnsmith@example.com",
+      password: "password",
+      password_confirmation: "password")
+    jones = User.create(
+      first_name: "John",
+      last_name: "Jones",
+      email: "johnjones@example.com",
+      password: "password",
+      password_confirmation: "password")
+    jackson = User.create(
+      first_name: "John",
+      last_name: "Jackson",
+      email: "johnjackson@example.com",
+      password: "password",
+      password_confirmation: "password")
+
+    expect(User.by_last_initial("J")).to eq [jackson, jones]
+  end
+
+  it "returns a sorted array of results that match" do
+    smith = User.create(
+      first_name: "John",
+      last_name: "Smith",
+      email: "johnsmith@example.com",
+      password: "password",
+      password_confirmation: "password")
+    jones = User.create(
+      first_name: "John",
+      last_name: "Jones",
+      email: "johnjones@example.com",
+      password: "password",
+      password_confirmation: "password")
+    jackson = User.create(
+      first_name: "John",
+      last_name: "Jackson",
+      email: "johnjackson@example.com",
+      password: "password",
+      password_confirmation: "password")
+
+    expect(User.by_last_initial("J")).to_not include smith
+  end
 end

@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def User.by_last_initial(letter)
+    where("last_name LIKE ?", "#{letter}%").order(:last_name)
+  end
+
   def name
     [first_name, last_name].join(" ")
   end
