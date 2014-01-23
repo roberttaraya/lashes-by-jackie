@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, length: { minimum: 6 }
 
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :cell_phone, :email, :password, :password_confirmation
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
