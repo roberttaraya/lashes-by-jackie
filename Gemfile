@@ -22,10 +22,14 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'better_errors'
   gem 'capybara'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 gem 'rails_12factor', group: :production
