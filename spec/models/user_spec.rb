@@ -12,6 +12,14 @@ describe User do
     expect(user).to be_valid
   end
 
+  it "is invalid without a first name" do
+    expect(User.new(first_name: nil)).to have(2).errors_on(:first_name)
+  end
+
+  it " is invalid without a first name with at least 2 characters" do
+    expect(User.new(first_name: "L")).to have(1).errors_on(:first_name)
+  end
+
   it "is invalid without an email address" do
     expect(User.new(email: nil)).to have(2).errors_on(:email)
   end
@@ -57,49 +65,38 @@ describe User do
     expect(user.name).to eq("John Doe")
   end
 
-  it "returns a sorted array of results that match" do
-    smith = User.create(
-      first_name: "John",
-      last_name: "Smith",
-      email: "johnsmith@example.com",
-      password: "password",
-      password_confirmation: "password")
-    jones = User.create(
-      first_name: "John",
-      last_name: "Jones",
-      email: "johnjones@example.com",
-      password: "password",
-      password_confirmation: "password")
-    jackson = User.create(
-      first_name: "John",
-      last_name: "Jackson",
-      email: "johnjackson@example.com",
-      password: "password",
-      password_confirmation: "password")
+  describe "filter last name by letter" do
+    before :each do
+      @smith = User.create(
+          first_name: "John",
+          last_name: "Smith",
+          email: "johnsmith@example.com",
+          password: "password",
+          password_confirmation: "password")
+      @jones = User.create(
+          first_name: "John",
+          last_name: "Jones",
+          email: "johnjones@example.com",
+          password: "password",
+          password_confirmation: "password")
+      @jackson = User.create(
+          first_name: "John",
+          last_name: "Jackson",
+          email: "johnjackson@example.com",
+          password: "password",
+          password_confirmation: "password")
+    end
 
-    expect(User.by_last_initial("J")).to eq [jackson, jones]
-  end
+    context "matching letters" do
+      it "returns a sorted array of results that match" do
+        expect(User.by_last_initial("J")).to eq [@jackson, @jones]
+      end
+    end
 
-  it "returns a sorted array of results that match" do
-    smith = User.create(
-      first_name: "John",
-      last_name: "Smith",
-      email: "johnsmith@example.com",
-      password: "password",
-      password_confirmation: "password")
-    jones = User.create(
-      first_name: "John",
-      last_name: "Jones",
-      email: "johnjones@example.com",
-      password: "password",
-      password_confirmation: "password")
-    jackson = User.create(
-      first_name: "John",
-      last_name: "Jackson",
-      email: "johnjackson@example.com",
-      password: "password",
-      password_confirmation: "password")
-
-    expect(User.by_last_initial("J")).to_not include smith
+    context "non-matching letters" do
+      it "returns a sorted array of results that match" do
+        expect(User.by_last_initial("J")).to_not include @smith
+      end
+    end
   end
 end
