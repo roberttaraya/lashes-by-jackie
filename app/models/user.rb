@@ -8,10 +8,14 @@ class User < ActiveRecord::Base
   validates :email, presence:   true,
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  has_secure_password
+  validates :first_name,  presence: true,
+                          length: { minimum: 2 }
   validates :password, length: { minimum: 6 }
+  validates :password_confirmation, presence: true
 
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+  has_secure_password
+
+  attr_accessible :first_name, :last_name, :cell_phone, :email, :password, :password_confirmation
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
@@ -19,6 +23,14 @@ class User < ActiveRecord::Base
 
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def User.by_last_initial(letter)
+    where("last_name LIKE ?", "#{letter}%").order(:last_name)
+  end
+
+  def name
+    [first_name, last_name].join(" ")
   end
 
   private
