@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe User do
+  it "has a valid factory" do
+    expect(FactoryGirl.build(:user)).to be_valid
+  end
+
   it "is valid with a first_name, last_name, cell_phone, email, password, password_confirmation" do
     user = User.new(
       first_name: "Jackie",
@@ -13,31 +17,26 @@ describe User do
   end
 
   it "is invalid without a first name" do
-    expect(User.new(first_name: nil)).to have(2).errors_on(:first_name)
+    user = FactoryGirl.build(:user, first_name: nil)
+    expect(user).to have(2).errors_on(:first_name)
   end
 
   it " is invalid without a first name with at least 2 characters" do
-    expect(User.new(first_name: "L")).to have(1).errors_on(:first_name)
+    user = FactoryGirl.build(:user, first_name: "L")
+    expect(user).to have(1).errors_on(:first_name)
   end
 
   it "is invalid without an email address" do
-    expect(User.new(email: nil)).to have(2).errors_on(:email)
+    user = FactoryGirl.build(:user, email: nil)
+    expect(user).to have(2).errors_on(:email)
   end
 
   it "is invalid with a duplicate email address" do
-    User.create(
-      first_name: "John",
-      last_name: "Doe",
-      email: "duplicate@example.com",
-      password: "password",
-      password_confirmation: "password")
+    FactoryGirl.create(:user,
+      email: "duplicate@example.com")
 
-    user = User.new(
-      first_name: "Jane",
-      last_name: "Doe",
-      email: "duplicate@example.com",
-      password: "password",
-      password_confirmation: "password")
+    user = FactoryGirl.build(:user,
+      email: "duplicate@example.com")
 
     expect(user).to have(1).errors_on(:email)
   end
@@ -55,12 +54,9 @@ describe User do
   end
 
   it "returns a user's full name as a string" do
-    user = User.new(
+    user = FactoryGirl.build(:user,
       first_name: "John",
-      last_name: "Doe",
-      email: "john@example.com",
-      password: "password",
-      password_confirmation: "password")
+      last_name: "Doe")
 
     expect(user.name).to eq("John Doe")
   end
