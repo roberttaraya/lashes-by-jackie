@@ -102,14 +102,36 @@ describe UsersController do
     end
 
     context "with invalid attributes" do
-      it "does not update the user"
-      it "re-renders the :edit template"
+      it "does not update the user's attributes" do
+        put :update, id: @user,
+          user: attributes_for(:user,
+            first_name: nil, last_name: "Smith")
+        @user.reload
+      expect(@user.first_name).to eq("John")
+      expect(@user.first_name).to_not eq("Smith")
+      end
+
+      it "re-renders the :edit template" do
+        get :edit, id: @user
+        expect(response).to render_template 'edit'
+      end
     end
   end
 
   describe "DELETE #destroy" do
-    it "deletes the user from the database"
-    it "redirects to the users#index"
-  end
+    before :each do
+      @user = create(:user)
+    end
 
+    it "deletes the user from the database" do
+      expect{
+        delete :destroy, id: @user
+      }.to change(User, :count).by(-1)
+    end
+
+    it "redirects to the users#index" do
+      delete :destroy, id: @user
+      expect(response).to redirect_to root_path
+    end
+  end
 end
