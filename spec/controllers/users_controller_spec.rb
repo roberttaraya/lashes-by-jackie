@@ -86,7 +86,15 @@ describe UsersController do
         expect(assigns(:user)).to eq(@user)
       end
 
-      it "updates the user in the database"
+      it "changes @user's attributes in the database" do
+        put :update, id: @user,
+          user: attributes_for(:user,
+            first_name: "Johnny", last_name: "Smith")
+          @user.reload
+          expect(@user.first_name).to eq("Johnny")
+          expect(@user.last_name).to eq("Smith")
+      end
+
       it "redirects to the :show template"
     end
 
