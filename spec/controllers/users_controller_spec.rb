@@ -95,7 +95,10 @@ describe UsersController do
           expect(@user.last_name).to eq("Smith")
       end
 
-      it "redirects to the :show template"
+      it "redirects to the :show template" do
+        get :show, id: @user
+        expect(response).to render_template 'show'
+      end
     end
 
     context "with invalid attributes" do
