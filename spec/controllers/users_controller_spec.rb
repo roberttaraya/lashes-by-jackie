@@ -75,7 +75,17 @@ describe UsersController do
   end
 
   describe "PUT #update" do
+    before :each do
+      @user = create(:user,
+        first_name: "John", last_name: "Smith")
+    end
+
     context "with valid attributes" do
+      it "located the requested @user" do
+        put :update, id: @user, user: attributes_for(:user)
+        expect(assigns(:user)).to eq(@user)
+      end
+
       it "updates the user in the database"
       it "redirects to the :show template"
     end
