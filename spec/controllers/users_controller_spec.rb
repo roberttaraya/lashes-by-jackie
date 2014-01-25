@@ -102,7 +102,15 @@ describe UsersController do
     end
 
     context "with invalid attributes" do
-      it "does not update the user"
+      it "does not update the user's attributes" do
+        put :update, id: @user,
+          user: attributes_for(:user,
+            first_name: nil, last_name: "Smith")
+        @user.reload
+      expect(@user.first_name).to eq("John")
+      expect(@user.first_name).to_not eq("Smith")
+      end
+
       it "re-renders the :edit template"
     end
   end
