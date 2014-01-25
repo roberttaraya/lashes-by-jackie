@@ -111,7 +111,10 @@ describe UsersController do
       expect(@user.first_name).to_not eq("Smith")
       end
 
-      it "re-renders the :edit template"
+      it "re-renders the :edit template" do
+        get :edit, id: @user
+        expect(response).to render_template 'edit'
+      end
     end
   end
 
