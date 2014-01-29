@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   end
 
   def User.by_last_initial(letter)
-    where("last_name LIKE ?", "#{letter}%").order(:last_name)
+    where("last_name LIKE ?", "#{letter.upcase}%").order(:last_name)
   end
 
   def name

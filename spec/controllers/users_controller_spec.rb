@@ -2,6 +2,15 @@ require 'spec_helper'
 
 describe UsersController do
 
+  context "guest access" do
+  end
+
+  context "client access" do
+  end
+
+  context "admin access" do
+  end
+
   describe "GET #index" do
     it "renders the :index view" do
       get :index
@@ -17,7 +26,7 @@ describe UsersController do
         }.to change(User, :count).by(1)
       end
 
-      it "signs in the new user" do
+      xit "signs in the new user" do
       end
 
       it "redirects to users#show" do
@@ -67,6 +76,7 @@ describe UsersController do
       get :show, id: user
       expect(assigns(:user)).to eq user
     end
+
     it "renders the :show template" do
       user = create(:user)
       get :show, id: user
@@ -77,7 +87,7 @@ describe UsersController do
   describe "PUT #update" do
     before :each do
       @user = create(:user,
-        first_name: "John", last_name: "Smith")
+        first_name: "John", last_name: nil)
     end
 
     context "with valid attributes" do
@@ -97,7 +107,7 @@ describe UsersController do
 
       it "redirects to the :show template" do
         get :show, id: @user
-        expect(response).to render_template 'show'
+        expect(response).to render_template :show
       end
     end
 
@@ -108,12 +118,12 @@ describe UsersController do
             first_name: nil, last_name: "Smith")
         @user.reload
       expect(@user.first_name).to eq("John")
-      expect(@user.first_name).to_not eq("Smith")
+      expect(@user.last_name).to_not eq("Smith")
       end
 
       it "re-renders the :edit template" do
         get :edit, id: @user
-        expect(response).to render_template 'edit'
+        expect(response).to render_template :edit
       end
     end
   end
